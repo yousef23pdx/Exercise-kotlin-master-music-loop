@@ -35,7 +35,7 @@ fun showPlaylist(songs: MutableList<String>) {
     }
 }
 
-fun menu():Int {
+fun menu():Int? {
     println("\n-----MusicMaster Playlist Menu-----")
     println("1. play all songs")
     println("2. add a song")
@@ -44,7 +44,9 @@ fun menu():Int {
     println("5. show playlist")
     println("6. exit")
     print("Enter choice: ")
-    return readln().toInt()
+
+    return readln().toIntOrNull()
+
 }
 
 
